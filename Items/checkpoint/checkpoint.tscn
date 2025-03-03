@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq2aa8tofkan4"]
+
+[ext_resource type="Script" path="res://Items/checkpoint/checkpoint.gd" id="1_jud4q"]
+[ext_resource type="Texture2D" uid="uid://cutosqc4eoukh" path="res://assets/signs-removebg-preview.png" id="2_ik75l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcvbv"]
+size = Vector2(64.625, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jou0"]
+atlas = ExtResource("2_ik75l")
+region = Rect2(0, 0, 249, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb51y"]
+atlas = ExtResource("2_ik75l")
+region = Rect2(249, 0, 249, 499)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwm5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jou0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb51y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="checkpoint" type="Area2D"]
+script = ExtResource("1_jud4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vcvbv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_jwm5t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

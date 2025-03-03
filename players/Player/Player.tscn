@@ -1,0 +1,199 @@
+[gd_scene load_steps=39 format=3 uid="uid://bmgjm56bm23b1"]
+
+[ext_resource type="Script" path="res://players/Player/player.gd" id="1_fkdnu"]
+[ext_resource type="Texture2D" uid="uid://dyac3ys0uydiv" path="res://assets/level/2d_lights_and_shadows_neutral_point_light.webp" id="3_fmrqi"]
+[ext_resource type="Texture2D" uid="uid://citpuhu01006x" path="res://assets/player/Fiery Imp/shot/Sprites/shot-1.png" id="3_h2t7b"]
+[ext_resource type="Texture2D" uid="uid://dwa7gchjqw1nw" path="res://assets/player/Fiery Imp/shot/Sprites/shot-2.png" id="4_ciq6i"]
+[ext_resource type="AudioStream" uid="uid://6rq50u82go2y" path="res://audio/425706__moogy73__woosh_medium_short_01.wav" id="4_kornw"]
+[ext_resource type="Texture2D" uid="uid://ja0jjjsalj1m" path="res://assets/player/Fiery Imp/idle/Sprites/idle-1.png" id="5_8ehcm"]
+[ext_resource type="Texture2D" uid="uid://brgk4odsdrwbj" path="res://assets/player/Fiery Imp/shot/Sprites/shot-3.png" id="5_254m4"]
+[ext_resource type="AudioStream" uid="uid://cso3l73b1l047" path="res://audio/534478__vital_sounds__2-men-walking-on-gravel-path.wav" id="5_n28e2"]
+[ext_resource type="Texture2D" uid="uid://dydoymtnixmw1" path="res://assets/player/Fiery Imp/idle/Sprites/idle-2.png" id="6_2x4po"]
+[ext_resource type="Texture2D" uid="uid://dojyxsrxurbat" path="res://assets/player/Fiery Imp/shot/Sprites/shot-4.png" id="6_wc48d"]
+[ext_resource type="Texture2D" uid="uid://b0l4o2jqtdesx" path="res://assets/player/Fiery Imp/idle/Sprites/idle-3.png" id="7_63y3h"]
+[ext_resource type="Texture2D" uid="uid://j1imwxfxp21t" path="res://assets/player/Fiery Imp/hurt/Sprites/hurt-1.png" id="7_78bgr"]
+[ext_resource type="Texture2D" uid="uid://dravbecg6ci1e" path="res://assets/player/Fiery Imp/idle/Sprites/idle-4.png" id="8_cmv0h"]
+[ext_resource type="Texture2D" uid="uid://ccrppagm8yic1" path="res://assets/player/Fiery Imp/hurt/Sprites/hurt-2.png" id="8_vxuuc"]
+[ext_resource type="Texture2D" uid="uid://budbwhv3vsvgw" path="res://assets/player/Fiery Imp/walk/Sprites/walk-1.png" id="9_6fgyo"]
+[ext_resource type="Texture2D" uid="uid://bsoal7rwa6rbe" path="res://assets/player/Fiery Imp/walk/Sprites/walk-2.png" id="10_xc7ws"]
+[ext_resource type="Texture2D" uid="uid://4gabjpo7vxky" path="res://assets/player/Fiery Imp/walk/Sprites/walk-3.png" id="11_1ysxa"]
+[ext_resource type="Texture2D" uid="uid://bcuhvsdyntkmy" path="res://assets/player/Fiery Imp/walk/Sprites/walk-4.png" id="12_inwvh"]
+[ext_resource type="Texture2D" uid="uid://dyexyrtgjym6k" path="res://assets/player/Fiery Imp/walk/Sprites/walk-5.png" id="13_4t48h"]
+[ext_resource type="Texture2D" uid="uid://pn82t3fybeae" path="res://assets/player/Fiery Imp/jump/Sprites/jump-1.png" id="13_7okjo"]
+[ext_resource type="Texture2D" uid="uid://ci6o30c0yj6eh" path="res://assets/player/Fiery Imp/walk/Sprites/walk-6.png" id="14_jj4vy"]
+[ext_resource type="Texture2D" uid="uid://domdamrefv1f8" path="res://assets/player/Fiery Imp/jump/Sprites/jump-2.png" id="14_k3uaf"]
+[ext_resource type="Texture2D" uid="uid://baa5ciw2fpt8e" path="res://assets/player/Fiery Imp/jump/Sprites/jump-3.png" id="15_7po3a"]
+[ext_resource type="Texture2D" uid="uid://l1q8fltxst65" path="res://assets/player/Fiery Imp/walk/Sprites/walk-7.png" id="15_uoesu"]
+[ext_resource type="Texture2D" uid="uid://c5fdwq4yy47vt" path="res://assets/player/Fiery Imp/jump/Sprites/jump-4.png" id="16_ft8qa"]
+[ext_resource type="Texture2D" uid="uid://5ywt6y0wf4wi" path="res://assets/player/Fiery Imp/walk/Sprites/walk-8.png" id="16_kalgu"]
+[ext_resource type="Texture2D" uid="uid://de3lxmjr0lw6" path="res://assets/player/Fiery Imp/jump/Sprites/jump-5.png" id="17_bj321"]
+[ext_resource type="Texture2D" uid="uid://bx5of8kxen3nj" path="res://assets/player/Fiery Imp/walk/Sprites/walk-9.png" id="17_f5jsv"]
+[ext_resource type="Texture2D" uid="uid://0x01clpsikxl" path="res://assets/player/Fiery Imp/walk/Sprites/walk-10.png" id="18_nkwq2"]
+[ext_resource type="Texture2D" uid="uid://swuu4cj1jf7n" path="res://assets/player/Fiery Imp/walk/Sprites/walk-11.png" id="19_k4aey"]
+[ext_resource type="Texture2D" uid="uid://bgxp3wbpe5dqe" path="res://assets/player/Fiery Imp/walk/Sprites/walk-12.png" id="20_a8j5b"]
+[ext_resource type="Texture2D" uid="uid://dr61dyabjxfgs" path="res://assets/player/Fiery Imp/walk/Sprites/walk-13.png" id="21_xktwd"]
+[ext_resource type="Texture2D" uid="uid://dnqud3l8vahf2" path="res://assets/player/Fiery Imp/walk/Sprites/walk-14.png" id="22_mh2dk"]
+[ext_resource type="Texture2D" uid="uid://b8gfnt6p2npo6" path="res://assets/player/Fiery Imp/walk/Sprites/walk-15.png" id="23_ehhr8"]
+[ext_resource type="Texture2D" uid="uid://bj1yrjqs6f6pu" path="res://assets/player/Fiery Imp/walk/Sprites/walk-16.png" id="24_woo2n"]
+[ext_resource type="PackedScene" uid="uid://c27gl6y4xxfvd" path="res://Items/health_bar/health_bar.tscn" id="36_bmhqf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6ot0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_h2t7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ciq6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_254m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wc48d")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_78bgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vxuuc")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8ehcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2x4po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_63y3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cmv0h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_7okjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k3uaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7po3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ft8qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bj321")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6fgyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xc7ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1ysxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_inwvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4t48h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jj4vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uoesu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kalgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_f5jsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nkwq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_k4aey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_a8j5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xktwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mh2dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ehhr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_woo2n")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pkgv"]
+radius = 22.0
+height = 86.0
+
+[node name="Player" type="CharacterBody2D" groups=["Persist", "Player", "characters"]]
+collision_mask = 255
+script = ExtResource("1_fkdnu")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.257214, 0.285304, 0.560552, 1)
+energy = 0.62
+texture = ExtResource("3_fmrqi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -17)
+scale = Vector2(2.07935, 2.28611)
+sprite_frames = SubResource("SpriteFrames_q6ot0")
+animation = &"attack"
+frame_progress = 0.973155
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3pkgv")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1, 41)
+stream = ExtResource("4_kornw")
+
+[node name="walk" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1, 41)
+stream = ExtResource("5_n28e2")
+
+[node name="dash" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="TextureProgressBar" parent="." instance=ExtResource("36_bmhqf")]
+offset_left = -20.0
+offset_top = -74.0
+offset_right = 0.0
+offset_bottom = -54.0

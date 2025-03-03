@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8e81ptu3ennf"]
+
+[ext_resource type="Texture2D" uid="uid://dwqk77cxuoya0" path="res://player/assets/arm.png" id="1_esj01"]
+[ext_resource type="Script" path="res://weapons/weapon.gd" id="1_wpqtm"]
+[ext_resource type="Texture2D" uid="uid://o4ltbuqfqala" path="res://weapons/assets/images/muzzle-flash.png" id="2_l7rk3"]
+[ext_resource type="Texture2D" uid="uid://c51ni1u6dkt4c" path="res://weapons/assets/images/assault-rifle.png" id="3_o4b0c"]
+[ext_resource type="AudioStream" uid="uid://2nsgchlkggr" path="res://weapons/assets/sounds/gunshot.wav" id="5_6i10i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5lnyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l7rk3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_wpqtm")
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Arm1" type="Sprite2D" parent="Sprites"]
+position = Vector2(57, -14)
+rotation = 0.347521
+texture = ExtResource("1_esj01")
+
+[node name="Arm2" type="Sprite2D" parent="Sprites"]
+position = Vector2(27, 32)
+rotation = -0.0340877
+texture = ExtResource("1_esj01")
+
+[node name="MuzzleFlash" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
+z_index = 1
+position = Vector2(245, 3)
+rotation = -0.0675023
+sprite_frames = SubResource("SpriteFrames_5lnyo")
+frame_progress = 1.0
+
+[node name="AssaultRifle" type="Sprite2D" parent="Sprites"]
+z_index = 1
+position = Vector2(114, 13)
+rotation = -0.0672911
+texture = ExtResource("3_o4b0c")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(208, 6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioShoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6i10i")
+
+[connection signal="animation_finished" from="Sprites/MuzzleFlash" to="." method="_on_muzzle_flash_animation_finished"]

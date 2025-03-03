@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://vfbvjeoyeo87"]
+
+[ext_resource type="Script" path="res://Items/power_ups/double_jump/area_2d.gd" id="1_txxay"]
+[ext_resource type="Texture2D" uid="uid://dh8pq53x11j46" path="res://assets/power_ups/double_jump.png" id="1_wed72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt1ff"]
+size = Vector2(107, 103)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_txxay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rt1ff")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wed72")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

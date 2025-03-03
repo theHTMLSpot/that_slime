@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bprw7j05yfics"]
+
+[ext_resource type="Texture2D" uid="uid://clbqrevkcjxo6" path="res://player/assets/body.png" id="1_kta6b"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_txbcj"]
+[ext_resource type="PackedScene" uid="uid://b8e81ptu3ennf" path="res://weapons/weapon.tscn" id="3_mgjcp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fshwt"]
+radius = 64.0
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_txbcj")
+
+[node name="WeaponSwitcher" type="Node2D" parent="."]
+
+[node name="Weapon" parent="WeaponSwitcher" instance=ExtResource("3_mgjcp")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fshwt")
+
+[node name="Body" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_kta6b")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://doar8iwwajh5c"]
+
+[ext_resource type="Texture2D" uid="uid://b5tfp6x0qplet" path="res://assets/dash_and_sprint_bar/pixil-frame-1.png" id="1_tmxf0"]
+[ext_resource type="Texture2D" uid="uid://dl6ye12is71qb" path="res://assets/dash_and_sprint_bar/pixil-frame-2.png" id="2_u4b7y"]
+[ext_resource type="Texture2D" uid="uid://cxffyrcctr46d" path="res://assets/dash_and_sprint_bar/pixil-frame-0.png" id="3_1fojm"]
+[ext_resource type="Script" path="res://Items/dash_cooldown/dash_cooldown.gd" id="4_jsu7p"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_right = 149.0
+offset_bottom = 149.0
+scale = Vector2(0.75, 0.75)
+max_value = 10.0
+fill_mode = 4
+texture_under = ExtResource("1_tmxf0")
+texture_over = ExtResource("2_u4b7y")
+texture_progress = ExtResource("3_1fojm")
+script = ExtResource("4_jsu7p")

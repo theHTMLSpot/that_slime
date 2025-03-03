@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpidafnliujhc"]
+
+[ext_resource type="Texture2D" uid="uid://dyac3ys0uydiv" path="res://assets/level/2d_lights_and_shadows_neutral_point_light.webp" id="1_pg7tn"]
+[ext_resource type="Script" path="res://Items/mouse_light/mouse_light.gd" id="2_pdcdf"]
+
+[node name="MouseLight" type="PointLight2D"]
+energy = 4.89
+texture = ExtResource("1_pg7tn")
+script = ExtResource("2_pdcdf")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1yrjl3qxgcuo"]
+
+[ext_resource type="Texture2D" uid="uid://cd6x8m6vsb08d" path="res://environment/assets/grid-grass.png" id="1_88hqr"]
+[ext_resource type="Texture2D" uid="uid://bxow6j8m8dmfc" path="res://environment/assets/bush.png" id="3_4u1q2"]
+[ext_resource type="PackedScene" uid="uid://b0xrdxuxm7yik" path="res://pickups/crate.tscn" id="4_0essl"]
+[ext_resource type="PackedScene" uid="uid://bprw7j05yfics" path="res://player/player.tscn" id="4_45rsn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67cje"]
+texture = ExtResource("3_4u1q2")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_nt3bs"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_67cje")
+
+[node name="World" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1144.0
+texture = ExtResource("1_88hqr")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_nt3bs")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 458766, 0, 0, 393230, 0, 0, 327694, 0, 0, 262158, 0, 0, 196622, 0, 0, 131086, 0, 0, 65550, 0, 0, 14, 0, 0, 13, 0, 0, 12, 0, 0, 11, 0, 0, 10, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("4_45rsn")]
+position = Vector2(768, 576)
+
+[node name="Crate" parent="." instance=ExtResource("4_0essl")]
+position = Vector2(1152, 576)

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbgr4gcwv54s2"]
+
+[ext_resource type="Script" path="res://Items/key/key.gd" id="1_45j7g"]
+[ext_resource type="Texture2D" uid="uid://dfwm277a6nvk" path="res://assets/key-removebg-preview.png" id="1_josfv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ojpu"]
+size = Vector2(70, 40.4)
+
+[node name="key" type="Area2D" groups=["items"]]
+script = ExtResource("1_45j7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.99998, 0)
+shape = SubResource("RectangleShape2D_4ojpu")
+
+[node name="Key-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1.075, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_josfv")
+
+[node name="grab" type="Label" parent="."]
+offset_left = -83.0
+offset_top = -50.0
+offset_right = 81.0
+offset_bottom = -27.0
+text = "press (g) to grab item"
+
+[node name="release" type="Label" parent="."]
+offset_left = -83.0
+offset_top = -50.0
+offset_right = 81.0
+offset_bottom = -27.0
+text = "press (q) to release item"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

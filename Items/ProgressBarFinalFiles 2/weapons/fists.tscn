@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://j0tjtjegg8r7"]
+
+[ext_resource type="Texture2D" uid="uid://dwqk77cxuoya0" path="res://player/assets/arm.png" id="1_intqv"]
+
+[node name="Fists" type="Node2D"]
+
+[node name="Arm1" type="Sprite2D" parent="."]
+position = Vector2(15, -32)
+rotation = -0.261799
+texture = ExtResource("1_intqv")
+
+[node name="Arm2" type="Sprite2D" parent="."]
+position = Vector2(15, 32)
+rotation = 0.261799
+texture = ExtResource("1_intqv")

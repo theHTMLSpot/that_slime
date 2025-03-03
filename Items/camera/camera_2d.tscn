@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://pbdiuw1op8gi"]
+
+[ext_resource type="AudioStream" uid="uid://cqos26c5kj41l" path="res://audio/565143__blackatomproductions__cavemixa.mp3" id="1_48r3i"]
+[ext_resource type="Script" path="res://Items/camera/camera_2d.gd" id="1_jelo0"]
+[ext_resource type="PackedScene" uid="uid://b0m6ryc7fri3g" path="res://Items/sprint_cooldown/Sprint_Cooldown.tscn" id="2_isn5j"]
+[ext_resource type="PackedScene" uid="uid://doar8iwwajh5c" path="res://Items/dash_cooldown/Dash_Cooldown.tscn" id="3_6ik1t"]
+[ext_resource type="Texture2D" uid="uid://dyac3ys0uydiv" path="res://assets/level/2d_lights_and_shadows_neutral_point_light.webp" id="4_5twr1"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(570, 321)
+script = ExtResource("1_jelo0")
+
+[node name="health_label" type="Label" parent="."]
+offset_left = -537.0
+offset_top = -300.0
+offset_right = -478.0
+offset_bottom = -277.0
+text = "Lives
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="health_number" type="Label" parent="."]
+offset_left = -469.0
+offset_top = -300.0
+offset_right = -410.0
+offset_bottom = -277.0
+text = "5
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3.05176e-05, 1.52588e-05)
+stream = ExtResource("1_48r3i")
+autoplay = true
+playback_type = 1
+
+[node name="TextureProgressBar" parent="." instance=ExtResource("2_isn5j")]
+offset_left = 327.0
+offset_top = -317.5
+offset_right = 476.0
+offset_bottom = -168.5
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureProgressBar3" parent="." instance=ExtResource("3_6ik1t")]
+offset_left = 451.0
+offset_top = -313.0
+offset_right = 600.0
+offset_bottom = -164.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(492, -271)
+energy = 0.0
+texture = ExtResource("4_5twr1")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(382, -262.5)
+scale = Vector2(0.695312, 0.527344)
+color = Color(0.904621, 0, 0.158798, 1)
+energy = 0.43
+texture = ExtResource("4_5twr1")
+
+[node name="Notifacations" type="Label" parent="."]
+offset_left = -176.0
+offset_top = -317.0
+offset_right = 229.0
+offset_bottom = -271.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

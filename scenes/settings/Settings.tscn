@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://biwul7f3stsf1"]
+
+[ext_resource type="Script" path="res://scenes/settings/settings.gd" id="1_1kcj5"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_1kcj5")
+
+[node name="UI_Back_To_Lobby" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 222.0
+offset_right = 844.0
+offset_bottom = 396.0
+text = "Save and Return to lobby"
+
+[connection signal="pressed" from="UI_Back_To_Lobby" to="." method="_on_UI_Back_To_lobby_pressed"]

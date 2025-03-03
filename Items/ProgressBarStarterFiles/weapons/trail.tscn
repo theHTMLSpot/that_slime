@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b15eqon51eueg"]
+
+[ext_resource type="Script" path="res://weapons/trail.gd" id="1_y5dkd"]
+
+[sub_resource type="Curve" id="Curve_eurhv"]
+_data = [Vector2(0.00703183, 0.025), 0.0, 1.59209, 0, 0, Vector2(1, 1), 0.313331, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_iqljb"]
+offsets = PackedFloat32Array(0, 0.291667, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[node name="Trail" type="Line2D"]
+width = 16.0
+width_curve = SubResource("Curve_eurhv")
+gradient = SubResource("Gradient_iqljb")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("1_y5dkd")
